@@ -205,7 +205,7 @@ No diagnostic tests have been performed yet.
 
 **Command:** `ipconfig getifaddr en0`
 
-**Result:** `[REDACTED_PRIVATE_IP]`
+**Result:** `	Private IPv4 address assigned`
 
 **Interpretation:** The Mac has a private IPv4 address assigned to its Wi-Fi interface. This is consistent with the Mac having an address on a local network. This test does not independently verify internet connectivity.
 
@@ -228,10 +228,10 @@ No diagnostic tests have been performed yet.
 **Command:** `route -n get default`
 
 **Results:**
-- Default gateway: `[REDACTED_PRIVATE_IP]`
+- Default gateway: `Local default gateway identified`
 - Network interface: `en0`
 
-**Interpretation:** The Mac's routing table identifies `[REDACTED_PRIVATE_IP]` as the default gateway. It is likely the local Wi-Fi router. This command identifies the configured route but does not independently confirm internet connectivity.
+**Interpretation:** The Mac's routing table identifies `Local default gateway identified` as the default gateway. It is likely the local Wi-Fi router. This command identifies the configured route but does not independently confirm internet connectivity.
 
 **Status:** Completed
 
@@ -247,7 +247,7 @@ No diagnostic tests have been performed yet.
 
 **Tool:** Terminal
 
-**Command:** `ping -c 4 [REDACTED_PRIVATE_IP]`
+**Command:** `Local default gateway identified`
 
 **Results:**
 - Packets transmitted: 4
@@ -304,7 +304,7 @@ No diagnostic tests have been performed yet.
 **Command:** `nslookup google.com`
 
 **Results:**
-- DNS server queried: `[REDACTED_PRIVATE_IP]`
+- DNS server queried: `Local default gateway identified`
 - Domain queried: `google.com`
 - Multiple IP addresses were returned.
 - The response was labeled non-authoritative.
@@ -337,7 +337,7 @@ No diagnostic tests have been performed yet.
 
 **Changes made:** None. Read-only inspection.
 
-**Additional verification:** The command `route -n get default` showed gateway `[REDACTED_PRIVATE_IP]` and interface `en0`. This indicates that Wi-Fi is the interface used for the Mac's default route at the time of testing.
+**Additional verification:** The command `route -n get default` showed gateway `Local default gateway identified` and interface `en0`. This indicates that Wi-Fi is the interface used for the Mac's default route at the time of testing.
 
 
 
@@ -353,7 +353,7 @@ No diagnostic tests have been performed yet.
 **Command:** `scutil --dns`
 
 **Results:**
-- DNS servers listed: `[REDACTED_PRIVATE_IP]`, `[REDACTED_PRIVATE_IP]`, and `[REDACTED_PRIVATE_IP]`
+- DNS servers listed: `DNS servers successfully identified`, `DNS servers successfully identified`, and `DNS servers successfully identified`
 - Resolver interface: `en0` (Wi-Fi)
 - Resolver reachability status: Reachable
 
@@ -441,7 +441,7 @@ Notes: Read-only inspection. No settings were changed.
 **Purpose:** Find the IPv4 address assigned to the Wi-Fi interface.  
 **Tool or Command Used:** Terminal command `ipconfig getifaddr en0`  
 **Expected Result:** Terminal displays the IPv4 address assigned to `en0`.  
-**Actual Result:** `[REDACTED_PRIVATE_IP]`  
+**Actual Result:** `Private IP address Assigned`  
 **Interpretation:** The Mac had a private IPv4 address assigned to its Wi-Fi interface at the time of testing.  
 **Status:** Completed  
 **Notes:** The address may change depending on network and DHCP settings.
@@ -454,8 +454,8 @@ Notes: Read-only inspection. No settings were changed.
 **Purpose:** Identify the gateway used for traffic leaving the local network.  
 **Tool or Command Used:** Terminal command `route -n get default`  
 **Expected Result:** Terminal displays the default route and its gateway.  
-**Actual Result:** Gateway `[REDACTED_PRIVATE_IP]`; interface `en0`.  
-**Interpretation:** The default route used gateway `[REDACTED_PRIVATE_IP]` through Wi-Fi at the time of testing.  
+**Actual Result:** Gateway `	Local default gateway identified`; interface `en0`.  
+**Interpretation:** The default route used gateway `	Local default gateway identified` through Wi-Fi at the time of testing.  
 **Status:** Completed  
 **Notes:** The gateway is commonly the local router on a home or apartment network.
 
@@ -482,7 +482,7 @@ Notes: Read-only inspection. No settings were changed.
 **Purpose:** Check whether a domain name can be resolved to IP addresses.  
 **Tool or Command Used:** Terminal command `nslookup google.com`  
 **Expected Result:** The DNS lookup returns IP addresses for the requested domain.  
-**Actual Result:** The lookup returned multiple IP addresses for `google.com`. The DNS server displayed was `[REDACTED_PRIVATE_IP]`.  
+**Actual Result:** The lookup returned multiple IP addresses for `google.com`. The DNS server displayed was `DNS servers successfully identified`.  
 **Interpretation:** DNS resolution succeeded for `google.com` during this test.  
 **Status:** Completed  
 **Notes:** A “Non-authoritative answer” is normal for this type of lookup.
@@ -495,7 +495,7 @@ Notes: Read-only inspection. No settings were changed.
 **Purpose:** Review the configured network services and identify the interface used by the default route.  
 **Tool or Command Used:** Terminal commands `networksetup -listnetworkserviceorder` and `route -n get default`  
 **Expected Result:** Terminal lists network services and the default route.  
-**Actual Result:** The listed services included USB Ethernet, Thunderbolt Bridge, Wi-Fi, and iPhone USB. The default route used gateway `[REDACTED_PRIVATE_IP]` through interface `en0`.  
+**Actual Result:** The listed services included USB Ethernet, Thunderbolt Bridge, Wi-Fi, and iPhone USB. The default route used gateway `	Local default gateway identified` through interface `en0`.  
 **Interpretation:** Wi-Fi was the interface used by the default route at the time of testing. The service list alone does not establish which interface carries all network traffic.  
 **Status:** Completed  
 **Notes:** Service availability and routing can change when connections change.
@@ -508,7 +508,7 @@ Notes: Read-only inspection. No settings were changed.
 **Purpose:** Review the DNS servers configured in macOS.  
 **Tool or Command Used:** Terminal command `scutil --dns`  
 **Expected Result:** Terminal displays DNS resolver information and configured name servers.  
-**Actual Result:** The Wi-Fi resolver listed DNS servers `[REDACTED_PRIVATE_IP]`, `[REDACTED_PRIVATE_IP]`, and `[REDACTED_PRIVATE_IP]`. The resolver was marked reachable.  
+**Actual Result:** The Wi-Fi resolver listed DNS servers `DNS servers successfully identified``, `DNS servers successfully identified``, and `DNS servers successfully identified``. The resolver was marked reachable.  
 **Interpretation:** macOS listed DNS servers for the Wi-Fi resolver. The earlier DNS lookup also succeeded. The resolver's reachability status alone does not guarantee that every DNS query will succeed.  
 **Status:** Completed  
 **Notes:** DNS configuration can vary with network settings.
