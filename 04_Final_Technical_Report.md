@@ -27,8 +27,8 @@ The recorded results showed that:
 - The Mac reported 16 GB of installed memory.
 - Storage settings reported 286.6 GB used out of 994.66 GB.
 - The Wi-Fi interface was identified as `en0`.
-- The Wi-Fi IPv4 address was `[REDACTED_PRIVATE_IP]`.
-- The default gateway was `[REDACTED_PRIVATE_IP]`.
+- The Wi-Fi IPv4 address was `Private IP address assigned`.
+- The default gateway was `	Local default gateway identified`.
 - The Mac successfully reached the default gateway during the ping test.
 - The Mac successfully reached the public IP address `8.8.8.8` during the ping test.
 - A DNS lookup for `google.com` returned IP addresses.
@@ -72,8 +72,8 @@ Twelve diagnostic checks were documented during this project:
 
 - The computer was identified as a 16-inch MacBook Pro (2023) with an Apple M2 Pro processor and 16 GB of memory.
 - macOS reported 286.6 GB used out of 994.66 GB of storage.
-- The Wi-Fi interface was identified as `en0`, with IPv4 address `[REDACTED_PRIVATE_IP]`.
-- The default gateway was `[REDACTED_PRIVATE_IP]`.
+- The Wi-Fi interface was identified as `en0`, with IPv4 address `Private IP address assigned`.
+- The default gateway was `	Local default gateway identified`.
 - The gateway ping test received all four replies, with 0% packet loss.
 - The public IP ping test to `8.8.8.8` received all four replies, with 0% packet loss.
 - A DNS lookup for `google.com` returned IP addresses.
