@@ -8,7 +8,7 @@
 - [x] Create the project folder.
 - [x] Create the project charter.
 - [x] Create the project plan.
-- [x ] Confirm the Mac model and macOS version.
+- [x] Confirm the Mac model and macOS version.
 
 ## Phase 2: System Diagnostics
 
