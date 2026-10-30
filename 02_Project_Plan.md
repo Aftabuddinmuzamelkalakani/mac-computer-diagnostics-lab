@@ -46,7 +46,7 @@
 
 **In progress:** Final report and portfolio preparation.
 
-**Not Summarize the diagnostic results and prepare the final technical report.
+Not Summarize the diagnostic results and prepare the final technical report.
 
 ## Working Rule
 
