@@ -35,10 +35,10 @@
 
 ## Phase 5: Portfolio
 
-- [ ] Organize project evidence.
-- [ ] Prepare a project summary for LinkedIn.
-- [ ] Review the project for accuracy and privacy.
-- [ ] Publish the project summary after completion.
+- [x] Organize project evidence.
+- [x] Prepare a project summary for LinkedIn.
+- [x] Review the project for accuracy and privacy.
+- [x] Publish the project summary after completion.
 
 ## Current Progress
 
